@@ -66,8 +66,8 @@ async function abortLaunchById(launchId){
     const aborted = await launches.updateOne({
         flightNumber: launchId
     }, {
-        upcoming = false,
-        success = false,
+        upcoming: false,
+        success: false,
     })
 
     return aborted.ok ===1 && aborted.nModified === 1;
