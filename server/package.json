@@ -21,6 +21,7 @@
     "cors": "^2.8.5",
     "csv-parse": "^5.0.3",
     "csv-parser": "^3.0.0",
+    "dotenv": "^14.2.0",
     "express": "^4.17.1",
     "mongoose": "^6.0.13",
     "morgan": "^1.10.0",

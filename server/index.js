@@ -1,5 +1,7 @@
 const http = require("http");
 
+require('dotenv').config();
+
 const app = require("./src/app");
 
 const { loadLaunchData } = require("./src/models/launches.model");
