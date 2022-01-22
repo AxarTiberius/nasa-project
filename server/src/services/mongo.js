@@ -1,25 +1,27 @@
 const mongoose = require('mongoose');
 
+require('dotenv').config();
+
+// Update below to match your own MongoDB connection string.
 const MONGO_URL = process.env.MONGO_URL;
 
+mongoose.connection.once('open', () => {
+  console.log('MongoDB connection ready!');
+});
+
+mongoose.connection.on('error', (err) => {
+  console.error(err);
+});
+
 async function mongoConnect() {
-    await mongoose
-    .connect(MONGO_URL, {
-      useNewUrlParser: true,
-    //   useCreateIndex: true,
-    //   useFindAndModify: true,
-      useUnifiedTopology: true
-    })
-    .then(() => console.log("MongoDB connection ready!"))
-    .catch((err) => console.log("MongoDB connection error", err));
-  
+  await mongoose.connect(MONGO_URL);
 }
 
 async function mongoDisconnect() {
-    await mongoose.disconnect();
+  await mongoose.disconnect();
 }
 
 module.exports = {
-    mongoConnect,
-    mongoDisconnect
-};
+  mongoConnect,
+  mongoDisconnect,
+}
