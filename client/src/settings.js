@@ -1,64 +1,31 @@
-const resources = {
-  background: {
-    small: "/img/background-small.jpg",
-    medium: "/img/background-medium.jpg",
-    large: "/img/background-large.jpg",
-  },
-  pattern: "/img/glow.png",
-};
+const FONT_FAMILY_ROOT = '"Titillium Web", sans-serif';
+const IMAGE_URL = '/assets/images/wallpaper.jpg';
+const SOUND_OBJECT_URL = '/assets/sounds/object.mp3';
+const SOUND_ASSEMBLE_URL = '/assets/sounds/assemble.mp3';
+const SOUND_TYPE_URL = '/assets/sounds/type.mp3';
+const SOUND_CLICK_URL = '/assets/sounds/click.mp3';
 
-const sounds = {
-  shared: {
-    volume: 0.5,
-  },
-  players: {
-    click: {
-      sound: { src: ["/sound/click.mp3"] },
-      settings: { oneAtATime: true }
-    },
-    typing: {
-      sound: { src: ["/sound/typing.mp3"] },
-      settings: { oneAtATime: true }
-    },
-    deploy: {
-      sound: { src: ["/sound/deploy.mp3"] },
-      settings: { oneAtATime: true }
-    },
-    success: {
-      sound: {
-        src: ["/sound/success.mp3"],
-        volume: 0.2,
-      },
-      settings: { oneAtATime: true }
-    },
-    abort: {
-      sound: { src: ["/sound/abort.mp3"] },
-      settings: { oneAtATime: true }
-    },
-    warning: {
-      sound: { src: ["/sound/warning.mp3"] },
-      settings: { oneAtATime: true }
-    },
-  }
+const globalStyles = { body: { fontFamily: FONT_FAMILY_ROOT } };
+const animatorGeneral = { duration: { enter: 200, exit: 200, stagger: 30 } };
+const audioSettings = { common: { volume: 0.25 } };
+const playersSettings = {
+  object: { src: [SOUND_OBJECT_URL] },
+  assemble: { src: [SOUND_ASSEMBLE_URL], loop: true },
+  type: { src: [SOUND_TYPE_URL], loop: true },
+  click: { src: [SOUND_CLICK_URL] }
 };
-
-const theme = {
-  color: {
-    content: "#a1ecfb",
-  },
-  padding: 20,
-  responsive: {
-    small: 600,
-    medium: 800,
-    large: 1200
-  },
-  typography: {
-    headerFontFamily: '"Titillium Web", "sans-serif"',
-  },
+const bleepsSettings = {
+  object: { player: 'object' },
+  assemble: { player: 'assemble' },
+  type: { player: 'type' },
+  click: { player: 'click' }
 };
 
 export {
-  resources,
-  sounds,
-  theme,
+  animatorGeneral,
+  globalStyles,
+  IMAGE_URL,
+  audioSettings,
+  playersSettings,
+  bleepsSettings,
 };

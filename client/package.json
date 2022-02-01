@@ -3,11 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "arwes": "https://gitpkg.now.sh/AxarTiberius/arwes/packages/arwes?next",
+    "@arwes/arwes": "https://gitpkg.now.sh/AxarTiberius/arwes/packages/arwes?gitpkg",
+    "@arwes/animated": "https://gitpkg.now.sh/AxarTiberius/arwes/packages/animated?gitpkg",
+    "@arwes/animator": "https://gitpkg.now.sh/AxarTiberius/arwes/packages/animator?gitpkg",
+    "@arwes/bleeps": "https://gitpkg.now.sh/AxarTiberius/arwes/packages/bleeps?gitpkg",
+    "@arwes/core": "https://gitpkg.now.sh/AxarTiberius/arwes/packages/core?gitpkg",
+    "@arwes/design": "https://gitpkg.now.sh/AxarTiberius/arwes/packages/design?gitpkg",
+    "@arwes/tools": "https://gitpkg.now.sh/AxarTiberius/arwes/packages/tools?gitpkg",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "@emotion/react": "^11.7.1",
+    "animejs": "^3.2.1",
+    "howler": "^2.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
