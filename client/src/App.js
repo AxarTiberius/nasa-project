@@ -6,78 +6,51 @@ import {
   Button,
   Card,
   StylesBaseline,
-  Text
+  Text,
+  TextField,
+  FramePentagon
 } from '@arwes/core';
 import {
-  audioSettings,
-  playersSettings,
-  bleepsSettings,
-  IMAGE_URL,
-  globalStyles,
-  animatorGeneral
+  globalStyles
 } from './settings'
 
 // End settings
+
+const SOUND_ASSEMBLE_URL = '/assets/sounds/assemble.mp3';
+const animatorGeneral = { duration: { enter: 2000, exit: 2000 } };
+const audioSettings = { common: { volume: 0.25 } };
+const playersSettings = { assemble: { src: [SOUND_ASSEMBLE_URL], loop: true } };
+const bleepsSettings = { assemble: { player: 'assemble' } };
 
 const App = () => {
   const [activate, setActivate] = React.useState(true);
 
   React.useEffect(() => {
-    const timeout = setTimeout(() => setActivate(!activate), 2000);
+    const timeout = setTimeout(() => setActivate(!activate), 20000);
     return () => clearTimeout(timeout);
   }, [activate]);
 
   return (
     <ArwesThemeProvider>
-      <StylesBaseline styles={globalStyles} />
       <BleepsProvider
         audioSettings={audioSettings}
         playersSettings={playersSettings}
         bleepsSettings={bleepsSettings}
       >
+        <StylesBaseline />
         <AnimatorGeneralProvider animator={animatorGeneral}>
-          <Card
+          <FramePentagon
             animator={{ activate }}
-            image={{
-              src: IMAGE_URL,
-              alt: 'A nebula'
-            }}
-            title='Nebula'
-            options={
-              <Button palette='secondary'>
-                <Text>Learn More</Text>
-              </Button>
-            }
-            style={{ maxWidth: 400 }}
+            inverted
+            hover
           >
-            <Text>
-              A nebula is an interstellar cloud of dust, hydrogen,
-              helium and other ionized gases. Originally, the term
-              was used to describe any diffused astronomical object,
-              including galaxies beyond the Milky Way.
-            </Text>
-          </Card>
+            <div style={{ width: 600, height: 1000 }} />
+          </FramePentagon>
         </AnimatorGeneralProvider>
       </BleepsProvider>
     </ArwesThemeProvider>
   );
 };
 
-export default App
 
-/*
-const App = () => {
-  return <ArwesThemeProvider>
-    <BleepsProvider sounds={sounds}>
-      <Arwes animate background={resources.background.large} pattern={resources.pattern}>
-        {anim => (
-          <Router>
-            <AppLayout show={anim.entered} />
-          </Router>
-        )}
-      </Arwes>
-    </BleepsProvider>
-  </ArwesThemeProvider>;
-};
-export default App;
-*/
+export default App
