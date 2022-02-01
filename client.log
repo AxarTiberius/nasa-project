@@ -1,0 +1,46 @@
+
+> nasa-project@1.0.0 client
+> npm start --prefix client
+
+
+> nasa-fe@1.0.0 start
+> react-scripts start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.17.0.2/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /root/projects/nasa-project/client/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Failed to compile.
+
+./src/App.js
+Module not found: Can't resolve 'arwes' in '/root/projects/nasa-project/client/src'
+Compiling...
+Failed to compile.
+
+./src/App.js
+Module not found: Can't resolve 'arwes' in '/root/projects/nasa-project/client/src'
+
+> nasa-project@1.0.0 client
+> npm start --prefix client
+
+
+> nasa-fe@1.0.0 start
+> react-scripts start
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.17.0.2/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /root/projects/nasa-project/client/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Failed to compile.
+
+./src/App.js
+Module not found: Can't resolve 'arwes' in '/root/projects/nasa-project/client/src'
+Compiling...
+Failed to compile.
+
+./src/App.js
+Module not found: Can't resolve 'arwes' in '/root/projects/nasa-project/client/src'

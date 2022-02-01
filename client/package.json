@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "arwes": "^1.0.0-alpha.5",
+    "arwes": "https://gitpkg.now.sh/AxarTiberius/arwes/packages/arwes?next",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",

@@ -1,0 +1,34 @@
+
+> nasa-project@1.0.0 server
+> npm run watch --prefix server
+
+
+> nasa-project-api@1.0.0 watch
+> nodemon src/server.js
+
+[33m[nodemon] 2.0.15[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connection ready!
+8 habitable planets found!
+Launch data already loaded!
+Listening on port 1341...
+
+> nasa-project@1.0.0 server
+> npm run watch --prefix server
+
+
+> nasa-project-api@1.0.0 watch
+> nodemon src/server.js
+
+[33m[nodemon] 2.0.15[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node src/server.js`[39m
+MongoDB connection ready!
+8 habitable planets found!
+Launch data already loaded!
+Listening on port 1341...
